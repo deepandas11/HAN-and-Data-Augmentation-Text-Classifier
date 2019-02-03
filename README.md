@@ -104,5 +104,10 @@ We use the augmented dataset and achieve the following results:
 ![download](https://user-images.githubusercontent.com/19747416/52181541-afe50b80-27b8-11e9-9bd5-f335513ed330.png)
 
 
+As one can see, the accuracy of the HAN based method is slightly worse than the traditional baseline LSTM model. This can be explained from the following figure. One can notice that obviously, not a lot of comments have a large number of sentences, but even if the comments have a large number of sentences, the length of these comments is just not large enough to derive proper weightings from the attention layer. My understanding is that due to such a limitation in the dataset, one gets such a result from the HAN model.
+
+![download 1](https://user-images.githubusercontent.com/19747416/52181662-056de800-27ba-11e9-9810-ad17f0e9757a.png)
+
+
 
 
