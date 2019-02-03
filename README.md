@@ -1,4 +1,4 @@
-# ECE539 Academic Project: Exploring Hierarchical Attention based Deep Neural Networks for Toxic Comments Classification
+# Exploring Hierarchical Attention based Deep Neural Networks for Toxic Comments Classification
 
 ## Introduction
 
@@ -31,9 +31,23 @@ Before we explore the Deep Learning models, we ensure that the dataset is unders
 
 ## [2. Baseline LSTM Model with Data Augmentation](https://github.com/deepandas11/HAN-and-Data-Augmentation-Text-Classifier/blob/master/notebook3-baseline-lstm-data-augmentation.ipynb)
 
-Recurrent Neural Networks and its derivatives is a well-researched topic in NLP. RNNs use internal memory to process input sequences. Humans understand each word based on our understanding of a set of previous words because our thoughts are persistence. Traditional Neural networks cant handle this issue, but RNNs allow loops in them, allowing information to exist. The following chain like structure enables RNNs to initimately understand sequences and lists.
+Recurrent Neural Networks and its derivatives is a well-researched topic in NLP. RNNs use internal memory to process input sequences. Humans understand each word based on our understanding of a set of previous words because our thoughts are persistence. Traditional Neural networks cant handle this issue, but RNNs allow loops in them, allowing information to exist. The following chain like structure enables RNNs to initimately understand sequences and lists. 
 
-**Long Term Dependencies**
+**Long Term Dependencies**: Sometimes, we need to look and understand only the very recent information to perform the present task, e.g. in doing the task of predicting the enxt word in a sentence, we might need a very limited context. However, there may be cases in which we need to have more context. As the gap between the most recent sequence entity and the context grows wider, RNNs are unable to learn to connect the information. 
+
+![rnn-longtermdependencies](https://user-images.githubusercontent.com/19747416/52181011-83c68c00-27b2-11e9-8d5a-26fe1e2e0284.png)
+
+In order to handle such long term dependencies, we turn to LSTMs
+
+**LSTM**
+
+The key structural change in LSTMs is that they have 4 neural structures in the repeating unit rather than just the one in RNNs. The LSTM enables a cell state to run across the entire network. With the use of Gates, information is optimally let in and is enabled to affect the cell state.
+
+- Forget Gate: What information from the cell state is to be thrown away based on the previous layer activation and current input
+- Input Gate: Decides which values might be updated using a candidate vector 
+- Output Gate: 
+
+![lstm3-chain](https://user-images.githubusercontent.com/19747416/52181023-a2c51e00-27b2-11e9-9d44-4fefbf6be64b.png)
 
 
 ![rnn-unrolled](https://user-images.githubusercontent.com/19747416/52180944-af954200-27b1-11e9-9260-10d53f60e2e3.png) 
