@@ -33,6 +33,8 @@ Before we explore the Deep Learning models, we ensure that the dataset is unders
 
 Recurrent Neural Networks and its derivatives is a well-researched topic in NLP. RNNs use internal memory to process input sequences. Humans understand each word based on our understanding of a set of previous words because our thoughts are persistence. Traditional Neural networks cant handle this issue, but RNNs allow loops in them, allowing information to exist. The following chain like structure enables RNNs to initimately understand sequences and lists. 
 
+![rnn-unrolled](https://user-images.githubusercontent.com/19747416/52180944-af954200-27b1-11e9-9260-10d53f60e2e3.png) 
+
 **Long Term Dependencies**: Sometimes, we need to look and understand only the very recent information to perform the present task, e.g. in doing the task of predicting the enxt word in a sentence, we might need a very limited context. However, there may be cases in which we need to have more context. As the gap between the most recent sequence entity and the context grows wider, RNNs are unable to learn to connect the information. 
 
 ![rnn-longtermdependencies](https://user-images.githubusercontent.com/19747416/52181011-83c68c00-27b2-11e9-8d5a-26fe1e2e0284.png)
@@ -43,14 +45,30 @@ In order to handle such long term dependencies, we turn to LSTMs
 
 The key structural change in LSTMs is that they have 4 neural structures in the repeating unit rather than just the one in RNNs. The LSTM enables a cell state to run across the entire network. With the use of Gates, information is optimally let in and is enabled to affect the cell state.
 
-- Forget Gate: What information from the cell state is to be thrown away based on the previous layer activation and current input
-- Input Gate: Decides which values might be updated using a candidate vector 
-- Output Gate: 
-
 ![lstm3-chain](https://user-images.githubusercontent.com/19747416/52181023-a2c51e00-27b2-11e9-9d44-4fefbf6be64b.png)
 
 
-![rnn-unrolled](https://user-images.githubusercontent.com/19747416/52180944-af954200-27b1-11e9-9260-10d53f60e2e3.png) 
+- Forget Gate: What information from the cell state is to be thrown away based on the previous layer activation and current input
+- Input Gate: Decides which values might be updated using a candidate vector 
+- Output Gate: Decides what parts of the cell state we can output
+
+Modifications to this LSTM structure can include:
+1. Peephole connections to introduce cell state in all gating operations
+2. Gated Recurrent Units: Combines forget and input gates as one and also merges cell state and hidden state.
+
+To ensure that the model doesn't overfit too soon, we have used the technique of Data Augmentation wherein I enabled the TextBLOB translation for the ENglish dataset to be used as an augmentation to the data.
+In the notebook, we use Baseline LSTM Model and GloVE embeddings which lead us to the following results:
+
+- Augmented Dataset:
+   - Validation accuracy: 98.92%
+   - Training accuracy: 99.19%
+
+- Basic Dataset
+   - Validation accuracy: 98.22%
+   - Training accuracy: 98.62%
+
+
+![download1](https://user-images.githubusercontent.com/19747416/52181207-2849cd80-27b5-11e9-925b-dfac0e570123.png)
 
 [Reading: Colah's Blog](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
 
