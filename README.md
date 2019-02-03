@@ -10,17 +10,20 @@ One major difference in classical machine learning and deep learning approaches 
 
 Proper feature representation is an important task in any Machine Learning task. In this case, we have text comments that are made of sentences and in return, sentences are made of words. A big challenge for NLP is to represent text in a proper format. We will be using **Vector space models** to represent the text corpus. The other inefficient method is the **Standard Boolean method.**
 
-Before we explore the Deep Learning models, we ensure 
+Before we explore the Deep Learning models, we ensure that the dataset is understood well and that it is suitable for applying Deep Learning based methods
 
 
 [1. Data Visualization and Feature Analysis](https://github.com/deepandas11/HAN-and-Data-Augmentation-Text-Classifier/blob/master/notebook1-data-visualization%20and%20feature%20analysis.ipynb)
+Tasks accomplished in this notebook:
+  - Visualizing categorization of data
+  - Visualizing categorization within toxic corpus
+  - Analysing the overlap across the various categories of toxicity
+  - Feature analysis 
+  - Understanding the importance of certain features in different classes of toxicity
+  - Adversarial Validation to ensure we can use Cross validation on our classification model.
 
 [2. Baseline LSTM Model with Data Augmentation](https://github.com/deepandas11/HAN-and-Data-Augmentation-Text-Classifier/blob/master/notebook3-baseline-lstm-data-augmentation.ipynb)
 
 [3. Hierarchical Attention Network Model](https://github.com/deepandas11/HAN-and-Data-Augmentation-Text-Classifier/blob/master/notebook4-han-with-augmented-data.ipynb)
 
 
-ELI5 feature analysis for Adversarial Validation: 
-
-
-![capture](https://user-images.githubusercontent.com/19747416/52160157-5627f880-2675-11e9-8f18-542eec397aa4.PNG)
