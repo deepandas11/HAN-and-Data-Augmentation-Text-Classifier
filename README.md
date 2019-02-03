@@ -73,6 +73,21 @@ In the notebook, we use Baseline LSTM Model and GloVE embeddings which lead us t
 [Reading: Colah's Blog](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
 
 
-[3. Hierarchical Attention Network Model](https://github.com/deepandas11/HAN-and-Data-Augmentation-Text-Classifier/blob/master/notebook4-han-with-augmented-data.ipynb)
+# [3. Hierarchical Attention Network Model](https://github.com/deepandas11/HAN-and-Data-Augmentation-Text-Classifier/blob/master/notebook4-han-with-augmented-data.ipynb) 
+
+Straight Neural Network methods are effective but better representation can be achieved by including knowledge of document structure in the model architecture. This can be understood as:
+- Not all parts of the document is relevant for understanding the content
+- Finding relevant sections in a document involves modeling the interactions of the words and not just the presence in isolation
+
+THe hierarchical attention that can be used here is:
+1. Words from sentences
+2. Sentences from comments.
+
+<img width="340" alt="attention1" src="https://user-images.githubusercontent.com/19747416/52181452-9b544380-27b7-11e9-8091-29d28d70eb2f.png">
+
+
+![attention2](https://user-images.githubusercontent.com/19747416/52181453-9c857080-27b7-11e9-83c2-cd13a0c9d094.png)
+
+
 
 
