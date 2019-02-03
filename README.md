@@ -83,10 +83,25 @@ THe hierarchical attention that can be used here is:
 1. Words from sentences
 2. Sentences from comments.
 
-<img width="340" alt="attention1" src="https://user-images.githubusercontent.com/19747416/52181452-9b544380-27b7-11e9-8091-29d28d70eb2f.png">
+In the following example we can see that the third sentence delivers a strong meaning and the words amazing and superb provide the most defining sentiment of the sentence. 
 
+<img width="600" alt="attention1" src="https://user-images.githubusercontent.com/19747416/52181452-9b544380-27b7-11e9-8091-29d28d70eb2f.png">
+
+The Hierarchical Attention Network is made of several parts:
+
+1. A word sequence encoder : Get annotations of the words by summarising information from both directions 
+2. A word-level attention layer: Not all words contribute equally to a sentence's meaning and this layer extracts such words that are important to the meaning of the sentence and aggregate the representation of those informative words
+3. A sentence encoder: Bidirectional LSTM to encode sentences
+4. A sentence-level attention layer: Rewards sentences that are clues to correctly classify a document
 
 ![attention2](https://user-images.githubusercontent.com/19747416/52181453-9c857080-27b7-11e9-83c2-cd13a0c9d094.png)
+
+We use the augmented dataset and achieve the following results:
+- Augmented Dataset:
+   - Validation accuracy: 98.03%
+   - Training accuracy: 98.21%
+
+![download](https://user-images.githubusercontent.com/19747416/52181541-afe50b80-27b8-11e9-9bd5-f335513ed330.png)
 
 
 
